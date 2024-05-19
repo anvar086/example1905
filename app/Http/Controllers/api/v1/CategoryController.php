@@ -57,6 +57,7 @@ class CategoryController extends Controller
     }
 
     public function delete($id){
+        
         $category = Category::where('id',$id)->first();
         $category->delete();
         return $this->success($category);
